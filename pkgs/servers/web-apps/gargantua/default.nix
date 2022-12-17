@@ -15,8 +15,11 @@ rustPlatform.buildRustPackage rec {
     sha256 = "sha256-lCEJWjjO65dPeRBHS2VO2MOAt8O0QZVHdYFvcnsIskI=";
   };
 
-  # cargoSha256 = "sha256-kxYXTzQl1klMxYR1W+1dfDKAg+qWxBYydYXczu4ot7E=";
-  cargoSha256 = lib.fakeSha256;
+  # Use:
+  # cargoSha256 = lib.fakeSha256;
+  # initially and then build the package. Get the correct value from
+  # the error message.
+  cargoSha256 = "sha256-s3s1YmXoFyQNuodMYbrSH9hXtIs3J6fcs6qWigt2lFw=";
 
   meta = with lib; {
     description = "A test web server which returns 404s.";
